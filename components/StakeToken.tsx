@@ -9,7 +9,7 @@ export default function StakeToken() {
     const { data: tokenBalance, isLoading: loadingTokenBalance } = useTokenBalance(stakeTokenContract, address);
     
     return (
-        <Card p={5}>
+        <Card p={5} bgGradient="linear(to-r, rgb(0, 222, 255), yellow)">
             <Stack>
                 <Heading>BLUE Balance</Heading>
                 <Skeleton h={4} w={"50%"} isLoaded={!loadingStakeToken && !loadingTokenBalance}>

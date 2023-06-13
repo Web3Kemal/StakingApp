@@ -3,7 +3,7 @@ import { ConnectWallet } from "@thirdweb-dev/react";
 
 export default function Navbar() {
     return (
-        <Box bg="blue.500">
+        <Box bgGradient="linear(to-r, rgb(0, 122, 255), rgb(0, 222, 255))">
             <Container maxW={"1200px"} py={4}>
                 <Flex direction={"row"} justifyContent={"space-between"}>
                     <Heading color="white">Official BLUE staking website. Get $CAPO for free by staking $BLUE!</Heading>

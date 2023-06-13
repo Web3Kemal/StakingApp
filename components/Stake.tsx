@@ -60,7 +60,7 @@ export default function Stake() {
     const toast = useToast();
     
     return (
-        <Card p={5} mt={10}>
+        <Card p={5} mt={10} bgGradient="linear(to-r, rgb(0, 122, 255), rgb(0, 222, 255))">
             <Heading>Earn Free $CAPO!</Heading>
             <SimpleGrid columns={2}>
                 <Card p={5} m={5}>

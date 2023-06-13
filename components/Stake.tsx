@@ -65,7 +65,7 @@ export default function Stake() {
             <SimpleGrid columns={2}>
                 <Card p={5} m={5}>
                     <Box textAlign={"center"} mb={5}>
-                        <Text fontSize={"xl"} fontWeight={"bold"}>Stake & Unstake BLUE:</Text>
+                        <Text fontSize={"xl"} fontWeight={"bold"}>Stake & Unstake BLUE, in 2 transactions:</Text>
                         <Skeleton isLoaded={!loadingStakeInfo && !loadingStakeTokenBalance}>
                             {stakeInfo && stakeInfo[0] ? (
                                 <Text>{ethers.utils.formatEther(stakeInfo[0])}{" $" + stakeTokenBalance?.symbol}</Text>

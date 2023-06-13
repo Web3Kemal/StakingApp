@@ -3,6 +3,7 @@ import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import '../styles/globals.css';
+import { Binance } from "@thirdweb-dev/chains";
 
 // This is the chain your dApp will work on.
 // Change this to the chain your app is built for.
@@ -11,7 +12,10 @@ const activeChain = "binance";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider activeChain={activeChain}>
+    <ThirdwebProvider 
+    activeChain={{
+      ...Binance, 
+      rpc: ["https://bsc-dataseed2.binance.org/"]}}>
       <ChakraProvider>
         <Navbar />
         <Component {...pageProps} />

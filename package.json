@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "deploy": "next build && next export && npx thirdweb@latest upload out"
+    "deploy": "next build && next export && npx thirdweb@latest upload out",
+    "postinstall": "export THIRDWEB_CLI_SKIP_INTRO=true && npx thirdweb generate --skip-update-check"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.6.0",

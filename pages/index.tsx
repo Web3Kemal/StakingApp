@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 import { useAddress } from "@thirdweb-dev/react";
 import StakeToken from "../components/StakeToken";
 import RewardToken from "../components/RewardToken";
@@ -10,22 +10,40 @@ const Home: NextPage = () => {
 
   if(!address) {
     return (
-      <Container maxW={"1200px"}>
-        <Flex h={"50vh"} justifyContent={"center"} alignItems={"center"}>
-          <Heading>Please Connect a BSC Wallet</Heading>
-        </Flex>
-      </Container>
+      <Box 
+        width="100vw"
+        height="100vh"
+        backgroundSize="cover"
+        backgroundImage={`url(${"/bg-capo-blue.png"})`}
+        backgroundRepeat="no-repeat"
+        backgroundColor="#0f1318" // fallback background color
+      >
+        <Container maxW={"1200px"}>
+          <Flex h={"50vh"} justifyContent={"center"} alignItems={"center"}>
+            <Heading color="white">Please Connect a BSC Wallet</Heading>
+          </Flex>
+        </Container>
+      </Box>
     )
   }
   
   return (
-    <Container maxW={"1200px"}>
-      <SimpleGrid columns={2} spacing={4} mt={10}>
-        <StakeToken />
-        <RewardToken />
-      </SimpleGrid>
-      <Stake />
-    </Container>
+    <Box 
+      width="100vw"
+      height="100vh"
+      backgroundSize="cover"
+      backgroundImage={`url(${"/bg-capo-blue.png"})`}
+      backgroundRepeat="no-repeat"
+      backgroundColor="#0f1318" // fallback background color
+    >
+      <Container maxW={"1200px"}>
+        <SimpleGrid columns={2} spacing={4} mt={10}>
+          <StakeToken />
+          <RewardToken />
+        </SimpleGrid>
+        <Stake />
+      </Container>
+    </Box>
   );
 };
 

@@ -47,7 +47,7 @@
 }
 
 .code {
-  background: #fafafa;
+  background: #ffffff;
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
@@ -64,7 +64,7 @@
 }
 
 .card {
-  background-color: #1b2129;
+  background-color: #ffffff;
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -79,7 +79,7 @@
 .card:hover,
 .card:focus,
 .card:active {
-  background-color: #272c34;
+  background-color: #ffffff;
   color: #0ea5e9;
   border-color: #0ea5e9;
 }
@@ -109,7 +109,7 @@
 
 .card,
 .footer {
-  border-color: #222;
+  border-color: #ffffff;
 }
 .code {
   background: #111;

@@ -3,6 +3,7 @@ import { Web3Button, useAddress, useContract, useContractRead, useTokenBalance }
 import { REWARD_TOKEN_ADDRESSES, STAKE_CONTRACT_ADDRESSES, STAKE_TOKEN_ADDRESSES } from "../cost/addresses";
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
+import abi from "../cost/abi";
 
 export default function Stake() {
     const address = useAddress();
@@ -16,7 +17,6 @@ export default function Stake() {
     const { 
         contract: stakeContract
     } = useContract(STAKE_CONTRACT_ADDRESSES, "custom");
-
     const { 
         data: stakeInfo, 
         refetch: refetchStakeInfo, 

@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <Container maxW={"1200px"} py={4}>
             <Flex direction={"row"} justifyContent={"space-between"}>
-                <Heading>Token Staking App</Heading>
+                <Heading>Official BLUE staking website. Get $CAPO for free by staking $BLUE!</Heading>
                 <ConnectWallet />
             </Flex>
         </Container>

@@ -61,11 +61,11 @@ export default function Stake() {
     
     return (
         <Card p={5} mt={10}>
-            <Heading>Earn Reward Token</Heading>
+            <Heading>Earn Free $CAPO!</Heading>
             <SimpleGrid columns={2}>
                 <Card p={5} m={5}>
                     <Box textAlign={"center"} mb={5}>
-                        <Text fontSize={"xl"} fontWeight={"bold"}>Stake Token:</Text>
+                        <Text fontSize={"xl"} fontWeight={"bold"}>Stake & Unstake BLUE:</Text>
                         <Skeleton isLoaded={!loadingStakeInfo && !loadingStakeTokenBalance}>
                             {stakeInfo && stakeInfo[0] ? (
                                 <Text>{ethers.utils.formatEther(stakeInfo[0])}{" $" + stakeTokenBalance?.symbol}</Text>
@@ -130,7 +130,7 @@ export default function Stake() {
                 </Card>
                 <Card p={5} m={5}>
                     <Flex h={"100%"} justifyContent={"space-between"} direction={"column"} textAlign={"center"}>
-                        <Text fontSize={"xl"} fontWeight={"bold"}>Reward Token:</Text>
+                        <Text fontSize={"xl"} fontWeight={"bold"}>CAPO Reward:</Text>
                         <Skeleton isLoaded={!loadingStakeInfo && !loadingRewardTokenBalance}>
                                 {stakeInfo && stakeInfo[0] ? (
                                     <Box>

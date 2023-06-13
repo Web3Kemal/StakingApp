@@ -11,7 +11,7 @@ export default function StakeToken() {
     return (
         <Card p={5}>
             <Stack>
-                <Heading>Reward Token</Heading>
+                <Heading>CAPO Balance</Heading>
                 <Skeleton h={4} w={"50%"} isLoaded={!loadingStakeToken && !loadingTokenBalance}>
                     <Text fontSize={"large"} fontWeight={"bold"}>${tokenBalance?.symbol}</Text>
                 </Skeleton>

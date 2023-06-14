@@ -14,7 +14,7 @@ export default function StakeToken() {
     
     return (
 
-            <Card p={padding} bgGradient="linear(to-r, yellow,rgb(0, 222, 255))">
+            <Card p={padding} bgGradient="linear(to-r, rgba(250,215,22,255),rgb(17, 112, 219))">
                 <Stack spacing={3}>
                     <Heading fontSize={fontSize}>CAPO Balance</Heading>
                     <Skeleton h={4} w={skeletonWidth}isLoaded={!loadingStakeToken && !loadingTokenBalance}>

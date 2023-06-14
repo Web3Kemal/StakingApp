@@ -12,7 +12,7 @@ export default function StakeToken() {
     const skeletonWidth = useBreakpointValue({ base: "80%", md: "50%" });
 
     return (
-        <Card p={padding} bgGradient="linear(to-r, rgb(0, 222, 255), yellow)">
+        <Card p={padding} bgGradient="linear(to-r, rgb(0, 122, 255), rgba(250,215,22,255))">
             <Stack>
                 <Heading fontSize={fontSize}>BLUE Balance</Heading>
                 <Skeleton h={4} w={skeletonWidth} isLoaded={!loadingStakeToken && !loadingTokenBalance}>

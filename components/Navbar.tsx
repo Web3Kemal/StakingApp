@@ -14,7 +14,7 @@ export default function Navbar() {
     | undefined;
 
   return (
-    <Box bgGradient="linear(to-l, rgb(0, 122, 255), rgb(0, 222, 255))">
+    <Box bgGradient="linear(to-l, rgba(250,215,22,255), rgb(17, 112, 219))">
       <Container maxW={"1200px"} py={4}>
         <Flex
           direction={direction}

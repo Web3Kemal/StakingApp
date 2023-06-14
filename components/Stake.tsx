@@ -77,7 +77,7 @@ export default function Stake() {
     <Card
       p={5}
       mt={10}
-      bgGradient="linear(to-r, rgb(0, 122, 255),rgba(250,215,22,255))"
+      bgGradient="linear(to-r,  rgba(250,215,22,255),rgb(17, 112, 219))"
     >
       <Heading>Earn Free $CAPO!</Heading>
       <SimpleGrid columns={[1, 2, gridColumns || 1]}>

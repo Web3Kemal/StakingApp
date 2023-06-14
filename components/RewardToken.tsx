@@ -1,24 +1,29 @@
-import { Card, Heading, Skeleton, Stack, Text } from "@chakra-ui/react";
+import { Card, Heading, Skeleton, Stack, Text, useBreakpointValue, Box } from "@chakra-ui/react";
 import { useAddress, useContract, useTokenBalance } from "@thirdweb-dev/react";
 import { REWARD_TOKEN_ADDRESSES } from "../cost/addresses";
 
 export default function StakeToken() {
     const address = useAddress();
     const { contract: stakeTokenContract, isLoading: loadingStakeToken } = useContract(REWARD_TOKEN_ADDRESSES);
-
     const { data: tokenBalance, isLoading: loadingTokenBalance } = useTokenBalance(stakeTokenContract, address);
+
+    
+    const fontSize = useBreakpointValue({ base: "md", md: "large" });
+    const padding = useBreakpointValue({ base: 4, md: 5 });
+    const skeletonWidth = useBreakpointValue({ base: "80%", md: "50%" });
     
     return (
-        <Card p={5} bgGradient="linear(to-r, yellow,rgb(0, 222, 255))">
-            <Stack>
-                <Heading>CAPO Balance</Heading>
-                <Skeleton h={4} w={"50%"} isLoaded={!loadingStakeToken && !loadingTokenBalance}>
-                    <Text fontSize={"large"} fontWeight={"bold"}>${tokenBalance?.symbol}</Text>
-                </Skeleton>
-                <Skeleton h={4} w={"100%"} isLoaded={!loadingStakeToken && !loadingTokenBalance}>
-                    <Text>{tokenBalance?.displayValue}</Text>
-                </Skeleton>
-            </Stack>
-        </Card>
+
+            <Card p={padding} bgGradient="linear(to-r, yellow,rgb(0, 222, 255))">
+                <Stack spacing={3}>
+                    <Heading fontSize={fontSize}>CAPO Balance</Heading>
+                    <Skeleton h={4} w={skeletonWidth}isLoaded={!loadingStakeToken && !loadingTokenBalance}>
+                        <Text fontSize={fontSize} fontWeight={"bold"}>${tokenBalance?.symbol}</Text>
+                    </Skeleton>
+                    <Skeleton isLoaded={!loadingStakeToken && !loadingTokenBalance}>
+                        <Text fontSize={fontSize}>{tokenBalance?.displayValue}</Text>
+                    </Skeleton>
+                </Stack>
+            </Card>
     )
 }

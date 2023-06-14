@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Box, Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, SimpleGrid, Text, Link as ChakraLink } from "@chakra-ui/react";
 import { useAddress } from "@thirdweb-dev/react";
 import StakeToken from "../components/StakeToken";
 import RewardToken from "../components/RewardToken";
@@ -42,8 +42,21 @@ const Home: NextPage = () => {
           <RewardToken />
         </SimpleGrid>
         <Stake />
+        <Text align="center" my={4} color="white">
+          Made with 💙 by{" "}
+          <ChakraLink
+            color="blue.500"
+            href="https://twitter.com/Web3Kemal"
+            isExternal
+            target="_blank"
+          >
+            @Web3Kemal
+          </ChakraLink>
+        </Text>
       </Container>
+      
     </Box>
+    
   );
 };
 

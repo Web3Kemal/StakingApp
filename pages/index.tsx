@@ -43,7 +43,7 @@ const Home: NextPage = () => {
         </SimpleGrid>
         <Stake />
         <Text align="center" my={4} color="white">
-          Made with 💙 by{" "}
+          Made with 💙💛 by{" "}
           <ChakraLink
             color="blue.500"
             href="https://twitter.com/Web3Kemal"
